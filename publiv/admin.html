@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dusun Suru Kidul</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="stylesheet" href="styles.css?v=admin-simpan-foto-1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="admin-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">DS</div>
+        <div>
+          <strong>Dusun Suru Kidul</strong>
+          <span>Kalurahan Hargomulyo</span>
+          <span>Kecamatan Gedang Sari</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="peta.html">Peta Dusun</a>
+        <a href="infografis.html">Infografis</a>
+        <a class="admin-nav-link is-active" href="admin.html">Login Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-login-panel" id="adminLoginPanel" aria-labelledby="adminLoginTitle">
+      <div class="admin-panel-heading">
+        <p class="profile-kicker">Admin</p>
+        <h1 id="adminLoginTitle">Login Admin</h1>
+      </div>
+      <form class="admin-form" id="adminLoginForm">
+        <label>
+          Username
+          <input id="adminUsername" name="username" type="text" autocomplete="username" required />
+        </label>
+        <label>
+          Password
+          <input id="adminPassword" name="password" type="password" autocomplete="current-password" required />
+        </label>
+        <button class="admin-primary-button" type="submit">Masuk</button>
+        <p class="admin-status" id="adminLoginStatus" aria-live="polite" hidden></p>
+      </form>
+    </section>
+
+    <section class="admin-dashboard" id="adminDashboard" aria-labelledby="adminDashboardTitle" hidden>
+      <div class="section-title-row admin-dashboard-header">
+        <div>
+          <p class="profile-kicker">Dashboard Admin</p>
+          <h1 id="adminDashboardTitle">Kelola Data dan Galeri</h1>
+        </div>
+        <button class="admin-secondary-button" id="adminLogoutButton" type="button">Keluar</button>
+      </div>
+
+      <div class="admin-panel-grid">
+        <article class="admin-panel">
+          <div class="admin-panel-heading">
+            <p class="profile-kicker">Data Kependudukan</p>
+            <h2>Edit data ringkasan</h2>
+          </div>
+          <form class="admin-form admin-stats-form" id="adminStatsForm">
+            <label>
+              Total Penduduk
+              <input id="adminPopulation" name="population" type="number" min="0" step="1" required />
+            </label>
+            <label>
+              Jumlah RT
+              <input id="adminRt" name="rt" type="number" min="0" step="1" required />
+            </label>
+            <label>
+              Laki-Laki
+              <input id="adminMale" name="male" type="number" min="0" step="1" required />
+            </label>
+            <label>
+              Perempuan
+              <input id="adminFemale" name="female" type="number" min="0" step="1" required />
+            </label>
+            <div class="admin-form-actions">
+              <button class="admin-primary-button" type="submit">Simpan data</button>
+              <button class="admin-ghost-button" id="adminResetStatsButton" type="button">Reset</button>
+            </div>
+            <p class="admin-status" id="adminStatsStatus" aria-live="polite" hidden></p>
+          </form>
+        </article>
+
+        <article class="admin-panel">
+          <div class="admin-panel-heading">
+            <p class="profile-kicker">Galeri</p>
+            <h2>Tambah foto kegiatan</h2>
+          </div>
+          <div class="admin-photo-tools">
+            <label class="admin-photo-caption-field">
+              Keterangan foto
+              <input id="adminPhotoCaption" type="text" maxlength="90" placeholder="Contoh: Kegiatan posyandu balita" />
+            </label>
+            <button class="admin-primary-button" id="adminPhotoButton" type="button">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M12 5v14M5 12h14" />
+              </svg>
+              Pilih foto
+            </button>
+            <button class="admin-primary-button" id="adminPhotoSaveButton" type="button" disabled>Simpan foto</button>
+            <input id="adminPhotoInput" type="file" accept="image/*" multiple hidden />
+            <p class="admin-status" id="adminPhotoStatus" aria-live="polite" hidden></p>
+          </div>
+          <div class="admin-photo-preview" id="adminPhotoPreview" aria-label="Foto tambahan admin"></div>
+        </article>
+
+        <article class="admin-panel admin-infographic-panel">
+          <div class="admin-panel-heading">
+            <p class="profile-kicker">Infografis</p>
+            <h2>Update data grafik</h2>
+          </div>
+          <form class="admin-form admin-infographic-form" id="adminInfographicForm">
+            <div class="admin-infographic-fields" id="adminInfographicFields"></div>
+            <div class="admin-form-actions">
+              <button class="admin-primary-button" type="submit">Simpan infografis</button>
+              <button class="admin-ghost-button" id="adminResetInfographicButton" type="button">Reset infografis</button>
+            </div>
+            <p class="admin-status" id="adminInfographicStatus" aria-live="polite" hidden></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <script src="/__/firebase/8.10.1/firebase-app.js"></script>
+  <script src="/__/firebase/8.10.1/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="site-admin.js?v=pure-admin-1"></script>
+  <script>
+    const adminApp = window.SuruKidulAdmin;
+    const loginPanel = document.getElementById('adminLoginPanel');
+    const dashboard = document.getElementById('adminDashboard');
+    const loginForm = document.getElementById('adminLoginForm');
+    const statsForm = document.getElementById('adminStatsForm');
+    const infographicForm = document.getElementById('adminInfographicForm');
+    const infographicFields = document.getElementById('adminInfographicFields');
+    const logoutButton = document.getElementById('adminLogoutButton');
+    const resetStatsButton = document.getElementById('adminResetStatsButton');
+    const resetInfographicButton = document.getElementById('adminResetInfographicButton');
+    const photoButton = document.getElementById('adminPhotoButton');
+    const photoSaveButton = document.getElementById('adminPhotoSaveButton');
+    const photoInput = document.getElementById('adminPhotoInput');
+    const photoCaption = document.getElementById('adminPhotoCaption');
+    const photoPreview = document.getElementById('adminPhotoPreview');
+    const loginStatus = document.getElementById('adminLoginStatus');
+    const statsStatus = document.getElementById('adminStatsStatus');
+    const infographicStatus = document.getElementById('adminInfographicStatus');
+    const photoStatus = document.getElementById('adminPhotoStatus');
+    const statInputs = {
+      population: document.getElementById('adminPopulation'),
+      rt: document.getElementById('adminRt'),
+      male: document.getElementById('adminMale'),
+      female: document.getElementById('adminFemale')
+    };
+    let pendingAdminPhotoFiles = [];
+    const infographicSectionTitles = {
+      age: 'Rentang usia',
+      rt: 'Sebaran RT',
+      education: 'Pendidikan',
+      work: 'Pekerjaan'
+    };
+
+    function setStatus(element, message) {
+      element.textContent = message;
+      element.hidden = !message;
+    }
+
+    function fillStatsForm() {
+      const stats = adminApp.readStats();
+      Object.keys(statInputs).forEach((key) => {
+        statInputs[key].value = stats[key];
+      });
+    }
+
+    function renderPhotoPreview() {
+      const photos = adminApp.readPhotos();
+      photoPreview.innerHTML = '';
+
+      if (!photos.length) {
+        const empty = document.createElement('p');
+        empty.className = 'admin-empty-state';
+        empty.textContent = 'Belum ada foto tambahan dari admin.';
+        photoPreview.appendChild(empty);
+        return;
+      }
+
+      photos.forEach((photo) => {
+        const item = document.createElement('figure');
+        const image = document.createElement('img');
+        const caption = document.createElement('figcaption');
+        const removeButton = document.createElement('button');
+
+        image.src = photo.src;
+        image.alt = photo.caption;
+        image.loading = 'lazy';
+        caption.textContent = photo.caption;
+        removeButton.type = 'button';
+        removeButton.textContent = 'x';
+        removeButton.setAttribute('aria-label', `Hapus foto ${photo.caption}`);
+        removeButton.addEventListener('click', async () => {
+          try {
+            await adminApp.removePhoto(photo.id);
+            renderPhotoPreview();
+            setStatus(photoStatus, 'Foto dihapus dari galeri.');
+          } catch (error) {
+            setStatus(photoStatus, 'Foto gagal dihapus. Pastikan admin sudah login.');
+          }
+        });
+
+        item.append(image, removeButton, caption);
+        photoPreview.appendChild(item);
+      });
+    }
+
+    function buildInfographicForm() {
+      const infographic = adminApp.readInfographic();
+      infographicFields.innerHTML = '';
+
+      Object.keys(infographic).forEach((sectionKey) => {
+        const section = document.createElement('section');
+        const title = document.createElement('h3');
+        const fields = document.createElement('div');
+
+        section.className = 'admin-dataset-panel';
+        title.textContent = infographicSectionTitles[sectionKey] || sectionKey;
+        fields.className = 'admin-dataset-fields';
+
+        infographic[sectionKey].forEach((item) => {
+          const label = document.createElement('label');
+          const input = document.createElement('input');
+
+          label.textContent = item.tableLabel || item.label;
+          input.name = `${sectionKey}:${item.id}`;
+          input.type = 'number';
+          input.min = '0';
+          input.step = '1';
+          input.required = true;
+          input.value = item.value;
+
+          label.appendChild(input);
+          fields.appendChild(label);
+        });
+
+        section.append(title, fields);
+        infographicFields.appendChild(section);
+      });
+    }
+
+    function collectInfographicForm() {
+      const formData = new FormData(infographicForm);
+      const currentInfographic = adminApp.readInfographic();
+
+      return Object.keys(currentInfographic).reduce((data, sectionKey) => {
+        data[sectionKey] = currentInfographic[sectionKey].map((item) => ({
+          ...item,
+          value: formData.get(`${sectionKey}:${item.id}`)
+        }));
+        return data;
+      }, {});
+    }
+
+    function updateView() {
+      const loggedIn = adminApp.isLoggedIn();
+      loginPanel.hidden = loggedIn;
+      dashboard.hidden = !loggedIn;
+      adminApp.updateAdminState(document);
+
+      if (loggedIn) {
+        fillStatsForm();
+        renderPhotoPreview();
+        buildInfographicForm();
+      }
+    }
+
+    loginForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const formData = new FormData(loginForm);
+      setStatus(loginStatus, 'Memeriksa login...');
+
+      const isValid = await adminApp.login(
+        String(formData.get('username') || '').trim(),
+        String(formData.get('password') || '')
+      );
+
+      if (!isValid) {
+        setStatus(loginStatus, 'Username atau password salah.');
+        return;
+      }
+
+      loginForm.reset();
+      setStatus(loginStatus, '');
+      updateView();
+    });
+
+    logoutButton.addEventListener('click', async () => {
+      await adminApp.logout();
+      updateView();
+    });
+
+    statsForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const formData = new FormData(statsForm);
+      adminApp.saveStats({
+        population: formData.get('population'),
+        rt: formData.get('rt'),
+        male: formData.get('male'),
+        female: formData.get('female')
+      });
+      fillStatsForm();
+      setStatus(statsStatus, 'Data berhasil disimpan.');
+    });
+
+    resetStatsButton.addEventListener('click', () => {
+      adminApp.resetStats();
+      fillStatsForm();
+      setStatus(statsStatus, 'Data dikembalikan ke nilai awal.');
+    });
+
+    infographicForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      adminApp.saveInfographic(collectInfographicForm());
+      buildInfographicForm();
+      setStatus(infographicStatus, 'Data infografis berhasil disimpan.');
+    });
+
+    resetInfographicButton.addEventListener('click', () => {
+      adminApp.resetInfographic();
+      buildInfographicForm();
+      setStatus(infographicStatus, 'Data infografis dikembalikan ke nilai awal.');
+    });
+
+    photoButton.addEventListener('click', () => {
+      photoInput.click();
+    });
+
+    photoInput.addEventListener('change', async () => {
+      pendingAdminPhotoFiles = Array.from(photoInput.files || []).filter((file) => file.type.startsWith('image/'));
+
+      if (!pendingAdminPhotoFiles.length) {
+        photoSaveButton.disabled = true;
+        setStatus(photoStatus, 'Pilih file foto dari perangkat.');
+        return;
+      }
+
+      photoSaveButton.disabled = false;
+      setStatus(photoStatus, `${pendingAdminPhotoFiles.length} foto siap ditambahkan. Tekan Simpan foto.`);
+    });
+
+    photoSaveButton.addEventListener('click', async () => {
+      if (!pendingAdminPhotoFiles.length) {
+        setStatus(photoStatus, 'Pilih foto terlebih dahulu.');
+        return;
+      }
+
+      setStatus(photoStatus, 'Menambahkan foto...');
+
+      try {
+        const photos = await adminApp.addPhotoFiles(pendingAdminPhotoFiles, photoCaption.value);
+        renderPhotoPreview();
+        if (photos.length) {
+          photoCaption.value = '';
+          pendingAdminPhotoFiles = [];
+          photoInput.value = '';
+          photoSaveButton.disabled = true;
+        }
+        setStatus(
+          photoStatus,
+          photos.length ? `${photos.length} foto berhasil ditambahkan.` : 'Pilih file foto dari perangkat.'
+        );
+      } catch (error) {
+        setStatus(photoStatus, 'Foto gagal ditambahkan. Coba pilih foto lain.');
+      }
+    });
+
+    updateView();
+  </script>
+  <script src="accessibility.js" defer></script>
+</body>
+</html>

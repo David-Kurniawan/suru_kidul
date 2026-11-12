@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peta Dusun Suru Kidul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="map-listing-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">DS</div>
+        <div>
+          <strong>Dusun Suru Kidul</strong>
+          <span>Kalurahan Hargomulyo</span>
+          <span>Kecamatan Gedang Sari</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a class="is-active" href="peta.html">Peta Dusun</a>
+        <a href="infografis.html">Infografis</a>
+        <a class="admin-nav-link" href="admin.html">Login Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="map-listing-main">
+    <section class="map-listing-title">
+      <h1>Menampilkan Peta Desa Dengan <em>Interest Point</em> Desa Suru Kidul</h1>
+    </section>
+
+    <section class="interest-map-shell" aria-label="Peta Desa Suru Kidul">
+      <iframe
+        class="interest-map-iframe"
+        title="Peta satelit Desa Suru Kidul"
+        src="https://maps.google.com/maps?ll=-7.83114856,110.57933599&amp;t=k&amp;z=16&amp;output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen>
+      </iframe>
+    </section>
+  </main>
+
+  <script src="/__/firebase/8.10.1/firebase-app.js" defer></script>
+  <script src="/__/firebase/8.10.1/firebase-firestore.js" defer></script>
+  <script src="/__/firebase/init.js" defer></script>
+  <script src="site-admin.js?v=pure-admin-1" defer></script>
+  <script src="accessibility.js" defer></script>
+</body>
+</html>

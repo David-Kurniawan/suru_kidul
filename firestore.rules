@@ -1,0 +1,19 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /galleryPhotos/{photoId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasOnly(['caption', 'src', 'createdAt', 'createdBy'])
+        && request.resource.data.caption is string
+        && request.resource.data.src is string
+        && request.resource.data.createdBy == 'Dusunsurukidul';
+      allow update: if false;
+      allow delete: if true;
+    }
+
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

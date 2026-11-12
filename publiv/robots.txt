@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://suru-kidul.firebaseapp.com/sitemap.xml

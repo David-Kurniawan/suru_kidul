@@ -1,0 +1,95 @@
+{
+   "checksum": "d1f9658f33df7f4ac106bb8e52e50300",
+   "roots": {
+      "bookmark_bar": {
+         "children": [ {
+            "date_added": "13260337851938812",
+            "date_last_used": "0",
+            "guid": "7360a9b8-0ad0-4bc1-999d-0862e95bf0f1",
+            "id": "10",
+            "name": "Soal essay",
+            "show_icon": false,
+            "source": "sync",
+            "type": "url",
+            "url": "https://classroom.google.com/u/0/c/MjExOTM0OTE1OTEy/a/Mjk5MjU5ODA0NTYy/details",
+            "visit_count": 0
+         }, {
+            "date_added": "13429679635088284",
+            "date_last_used": "0",
+            "guid": "aa1104c5-216e-450d-8b10-4ebe7daca977",
+            "id": "9",
+            "name": "Lenovo Support",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://support.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13429679635086955",
+            "date_last_used": "0",
+            "guid": "7191d7ca-3b60-4762-8c8c-d4bdf325396d",
+            "id": "8",
+            "name": "Lenovo",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.lenovo.com/",
+            "visit_count": 0
+         }, {
+            "date_added": "13429679635085067",
+            "date_last_used": "0",
+            "guid": "3d0d256f-1b5d-4cdd-9147-415277bea137",
+            "id": "7",
+            "name": "McAfee",
+            "show_icon": false,
+            "source": "oem_preload",
+            "type": "url",
+            "url": "https://www.mcafee.com/consumer/v/browserfav/lenovo.html",
+            "visit_count": 0
+         } ],
+         "date_added": "13429679634904233",
+         "date_last_used": "0",
+         "date_modified": "13429679635088284",
+         "guid": "0bc5d13f-2cba-5d74-951f-3f233fe6c908",
+         "id": "1",
+         "name": "Favorites bar",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "other": {
+         "children": [  ],
+         "date_added": "13429679634904233",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "82b081ec-3dd3-529c-8475-ab6c344590dd",
+         "id": "2",
+         "name": "Other favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "synced": {
+         "children": [  ],
+         "date_added": "13429679634904233",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "4cf2e351-0e85-532b-bb37-df045d8f8d0f",
+         "id": "3",
+         "name": "Mobile favorites",
+         "source": "unknown",
+         "type": "folder"
+      },
+      "workspaces_v2": {
+         "children": [  ],
+         "date_added": "13429679634904233",
+         "date_last_used": "0",
+         "date_modified": "0",
+         "guid": "75aa6670-344f-549d-b742-660f029506ab",
+         "id": "5",
+         "name": "Workspaces",
+         "source": "unknown",
+         "type": "folder"
+      }
+   },
+   "sync_metadata": "CkEKHgiIgQISCIrAjaafAQAAKg4QABgBIAAoBTAAOABAABIAKhhTdWZZK0FLeXJ3L05aK0JGYy93QkRBPT1IA6AGDBKOAQgFEokBChx3UkJyWkwrNlBBOWF2S2dqTlA3SlhETGNmdnM9EiQ3YzU3OTM5My1jOGQwLTU1OTEtYmRjZS0yYTM0NjI3YTg2ZTMYACAAKAAwx6DYqOQzOJ+o2KjkM0CfqNio5DNKHG5teDY1c1FEdnhJOFRnRWV2K0ErbnR0b1NuND1aAGUAAAAAwj4CYAASjgEIAxKJAQocbmpnRHU4OGVDcnZYcDg2cEQ3ZkhHY3FGcDg4PRIkZjM0N2Y5MTAtODg4NS01MmY0LTlkMzctYWFjNDU0NWI2NjE2GAAgACgAMNiqpv2yMDiwsMKV7C9AsLDClewvShx5ek5CMDFjbjU0QTdjUlUwdVQrL1BnbVR0VW89WgBlAAAAAMI+AmAAEqwBCAoSpwEKHFNTbkRaM3JGOC90QUljRklEaHQ3S3h4UWVtVT0SJDczNjBhOWI4LTBhZDAtNGJjMS05OTlkLTA4NjJlOTViZjBmMRgAIAAoADCNtKOCmzE4ou/+wLswQKLv/sC7MEocODcyVmRqMlFZdWcwOE03dEN1bGxJQnRLc3RnPVoeIhxMWEszcW0xRW04MjBRYVJnTFdMaXpJcDdORzQ9ZYP4GHbCPgJgBRKOAQgBEokBChx5eEovNmZ2a2VjcjdrcDVFUXpCNHRXTHBkYkU9EiQwNjZiNDM0My05OGUwLTVkZjMtYmZhYi03MjM1MTEyZmIwYmEYACAAKAAw2Kqm/bIwOOGvwpXsL0Dhr8KV7C9KHGFSQ1dMZ2hGOWI1SW5xS0lEdnVKL2p2UWtGYz1aAGUAAAAAwj4CYAASjgEIAhKJAQocWWNTVG9udkVTUHdxQ3M0TDJjclZodjY4TDk4PRIkMjM3Y2NlNWQtYzZiZS01YWMxLWI0ZGYtNWEwZDA0NzFkMDJjGAAgACgAMNiqpv2yMDjxr8KV7C9A8a/ClewvShxvUFZraHdCUmJWNjVLQ1dSMitJT05IV29PdTg9WgBlAAAAAMI+AmAAMAA4AA==",
+   "version": 1
+}

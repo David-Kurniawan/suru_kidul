@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Infografis Penduduk Dusun Suru Kidul</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body class="infographic-page">
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="index.html" class="brand">
+        <div class="brand-mark">DS</div>
+        <div>
+          <strong>Dusun Suru Kidul</strong>
+          <span>Kalurahan Hargomulyo</span>
+          <span>Kecamatan Gedang Sari</span>
+        </div>
+      </a>
+      <nav class="main-nav">
+        <a href="index.html">Beranda</a>
+        <a href="profil.html">Profil</a>
+        <a href="peta.html">Peta Dusun</a>
+        <a class="is-active" href="infografis.html">Infografis</a>
+        <a class="admin-nav-link" href="admin.html">Login Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="infographic-hero">
+      <div class="container">
+        <p class="profile-kicker">Infografis</p>
+        <h1>Infografis Dusun Suru Kidul</h1>
+        <p class="infographic-hero-copy">Ringkasan data penduduk, pendidikan, pekerjaan, usia, dan sebaran wilayah untuk membantu warga membaca kondisi dusun secara cepat.</p>
+      </div>
+    </section>
+
+    <section id="dashboard-padukuhan" class="infographic-section demographic-intro">
+      <div class="container demographic-grid">
+        <div class="demographic-copy">
+          <p class="profile-kicker">Demografi Padukuhan</p>
+          <h2>Data kependudukan Padukuhan Surukidul</h2>
+          <p>Ringkasan ini memuat jumlah warga, jenis kelamin, pendidikan, rentang usia, mata pencaharian, dan sebaran RT Padukuhan Surukidul.</p>
+        </div>
+        <section class="dashboard-total-card demographic-total-card" aria-labelledby="dashboard-total-title">
+          <h3 id="dashboard-total-title">Jumlah Warga</h3>
+          <strong data-site-field="population">311</strong>
+        </section>
+      </div>
+    </section>
+
+    <section class="infographic-section padukuhan-dashboard-section">
+      <div class="container">
+        <div class="dashboard-section-heading">
+          <p class="profile-kicker">Dashboard Padukuhan</p>
+          <h2>Padukuhan Surukidul dalam angka</h2>
+        </div>
+        <article class="padukuhan-dashboard" aria-label="Grafik data Padukuhan Surukidul">
+          <div class="dashboard-body">
+            <div class="dashboard-grid">
+              <section class="dashboard-chart-card dashboard-gender-card" aria-labelledby="dashboard-gender-title">
+                <h3 id="dashboard-gender-title">Distribusi Jenis Kelamin Warga Padukuhan Surukidul</h3>
+                <div class="chart-body gender-chart-body">
+                  <p class="chart-title">Jumlah Penduduk Warga Padukuhan Surukidul Berdasarkan Jenis Kelamin</p>
+                  <div class="gender-chart-wrap">
+                    <div class="gender-pie" role="img" aria-label="Laki-laki 167 warga dan perempuan 144 warga." data-gender-pie>
+                      <span class="pie-label pie-label-male" data-site-field="male">167</span>
+                      <span class="pie-label pie-label-female" data-site-field="female">144</span>
+                    </div>
+                    <div class="gender-legend" aria-hidden="true">
+                      <span><i class="legend-swatch is-male"></i>Laki-Laki</span>
+                      <span><i class="legend-swatch is-female"></i>Perempuan</span>
+                    </div>
+                  </div>
+                  <table class="sr-only">
+                    <caption>Data jenis kelamin warga Padukuhan Surukidul</caption>
+                    <tbody>
+                      <tr><th scope="row">Laki-Laki</th><td data-site-field="male">167</td></tr>
+                      <tr><th scope="row">Perempuan</th><td data-site-field="female">144</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+            </div>
+
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="infographic-section">
+      <div class="container">
+        <div class="infographic-heading">
+          <p class="profile-kicker">Jumlah Penduduk</p>
+          <h2>Ringkasan data utama</h2>
+        </div>
+
+        <div class="infographic-stat-grid">
+          <article class="infographic-stat-card">
+            <span class="stat-icon" aria-hidden="true">P</span>
+            <strong data-site-field="population">311</strong>
+            <p>Penduduk</p>
+          </article>
+          <article class="infographic-stat-card">
+            <span class="stat-icon" aria-hidden="true">R</span>
+            <strong data-site-field="rt">4</strong>
+            <p>RT</p>
+          </article>
+          <article class="infographic-stat-card">
+            <span class="stat-icon" aria-hidden="true">L</span>
+            <strong data-site-field="male">167</strong>
+            <p>Laki-Laki</p>
+          </article>
+          <article class="infographic-stat-card">
+            <span class="stat-icon" aria-hidden="true">W</span>
+            <strong data-site-field="female">144</strong>
+            <p>Perempuan</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="infographic-section is-muted">
+      <div class="container">
+        <div class="infographic-heading">
+          <h2>Jumlah Penduduk Padukuhan Surukidul</h2>
+        </div>
+        <div class="population-summary-grid">
+          <article>
+            <span>Total Penduduk</span>
+            <strong data-site-field="population" data-suffix=" Jiwa">311 Jiwa</strong>
+          </article>
+          <article>
+            <span>Jumlah RT</span>
+            <strong data-site-field="rt" data-suffix=" RT">4 RT</strong>
+          </article>
+          <article>
+            <span>Perempuan</span>
+            <strong data-site-field="female" data-suffix=" Jiwa">144 Jiwa</strong>
+          </article>
+          <article>
+            <span>Laki-Laki</span>
+            <strong data-site-field="male" data-suffix=" Jiwa">167 Jiwa</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="infographic-section">
+      <div class="container infographic-panel-grid population-detail-grid">
+        <article class="infographic-panel age-composition-card">
+          <div class="infographic-heading">
+            <p class="profile-kicker">Berdasarkan Kelompok Umur</p>
+            <h2>Komposisi usia warga</h2>
+          </div>
+          <div class="chart-body compact-chart-body age-composition-chart-body">
+            <p class="chart-title">Rentang Usia Warga Padukuhan Surukidul</p>
+            <div class="column-chart age-range-chart" role="img" aria-label="Rentang usia warga Padukuhan Surukidul: 0 sampai 10 tahun 28, 11 sampai 20 tahun 44, 21 sampai 30 tahun 46, 31 sampai 40 tahun 43, 41 sampai 50 tahun 41, 51 sampai 60 tahun 46, 61 sampai 70 tahun 31, 71 sampai 80 tahun 13, 81 sampai 90 tahun 16, 91 sampai 100 tahun 3.">
+              <div class="column-bars">
+                <div class="column-item" style="--value: 60.87%;"><strong>28</strong><span class="column-bar"></span><em>0-10</em></div>
+                <div class="column-item" style="--value: 95.65%;"><strong>44</strong><span class="column-bar"></span><em>11-20</em></div>
+                <div class="column-item" style="--value: 100%;"><strong>46</strong><span class="column-bar"></span><em>21-30</em></div>
+                <div class="column-item" style="--value: 93.48%;"><strong>43</strong><span class="column-bar"></span><em>31-40</em></div>
+                <div class="column-item" style="--value: 89.13%;"><strong>41</strong><span class="column-bar"></span><em>41-50</em></div>
+                <div class="column-item" style="--value: 100%;"><strong>46</strong><span class="column-bar"></span><em>51-60</em></div>
+                <div class="column-item" style="--value: 67.39%;"><strong>31</strong><span class="column-bar"></span><em>61-70</em></div>
+                <div class="column-item" style="--value: 28.26%;"><strong>13</strong><span class="column-bar"></span><em>71-80</em></div>
+                <div class="column-item" style="--value: 34.78%;"><strong>16</strong><span class="column-bar"></span><em>81-90</em></div>
+                <div class="column-item" style="--value: 6.52%;"><strong>3</strong><span class="column-bar"></span><em>91-100</em></div>
+              </div>
+            </div>
+            <table class="sr-only">
+              <caption>Data rentang usia warga Padukuhan Surukidul</caption>
+              <tbody>
+                <tr><th scope="row">0-10</th><td>28</td></tr>
+                <tr><th scope="row">11-20</th><td>44</td></tr>
+                <tr><th scope="row">21-30</th><td>46</td></tr>
+                <tr><th scope="row">31-40</th><td>43</td></tr>
+                <tr><th scope="row">41-50</th><td>41</td></tr>
+                <tr><th scope="row">51-60</th><td>46</td></tr>
+                <tr><th scope="row">61-70</th><td>31</td></tr>
+                <tr><th scope="row">71-80</th><td>13</td></tr>
+                <tr><th scope="row">81-90</th><td>16</td></tr>
+                <tr><th scope="row">91-100</th><td>3</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="infographic-section">
+      <div class="container infographic-panel-grid population-detail-grid">
+
+        <article class="infographic-panel hamlet-panel">
+          <div class="infographic-heading">
+            <p class="profile-kicker">Berdasarkan Dusun</p>
+            <h2>Sebaran penduduk</h2>
+          </div>
+          <div class="hamlet-panel-content">
+            <div class="hamlet-list">
+              <div><span>RT I</span><strong>58 Jiwa</strong></div>
+              <div><span>RT II</span><strong>87 Jiwa</strong></div>
+              <div><span>RT III</span><strong>91 Jiwa</strong></div>
+              <div><span>RT IV</span><strong>75 Jiwa</strong></div>
+            </div>
+            <div class="rt-panel-chart">
+              <h3>Sebaran RT</h3>
+              <p class="chart-title">Jumlah warga setiap RT Padukuhan Surukidul</p>
+              <div class="column-chart rt-chart" role="img" aria-label="Jumlah warga setiap RT Padukuhan Surukidul: RT 1 sebanyak 58, RT 2 sebanyak 87, RT 3 sebanyak 91, RT 4 sebanyak 75.">
+                <div class="column-bars">
+                  <div class="column-item" style="--value: 58%;"><strong>58</strong><span class="column-bar"></span><em>1</em></div>
+                  <div class="column-item" style="--value: 87%;"><strong>87</strong><span class="column-bar"></span><em>2</em></div>
+                  <div class="column-item" style="--value: 91%;"><strong>91</strong><span class="column-bar"></span><em>3</em></div>
+                  <div class="column-item" style="--value: 75%;"><strong>75</strong><span class="column-bar"></span><em>4</em></div>
+                </div>
+              </div>
+              <table class="sr-only">
+                <caption>Data warga setiap RT Padukuhan Surukidul</caption>
+                <tbody>
+                  <tr><th scope="row">RT 1</th><td>58</td></tr>
+                  <tr><th scope="row">RT 2</th><td>87</td></tr>
+                  <tr><th scope="row">RT 3</th><td>91</td></tr>
+                  <tr><th scope="row">RT 4</th><td>75</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="infographic-section is-muted">
+      <div class="container">
+        <article class="infographic-panel education-section-card">
+          <div class="education-panel-header">
+            <h2>Tingkat Pendidikan Warga Padukuhan Surukidul</h2>
+          </div>
+          <div class="chart-body education-section-chart-body">
+            <p class="chart-title">Tingkat Pendidikan Warga Padukuhan Surukidul</p>
+            <div class="education-chart education-section-chart" role="img" aria-label="Tingkat pendidikan warga Padukuhan Surukidul: tamat SD sederajat 120, tidak atau belum sekolah 102, SLTA sederajat 34, belum tamat SD sederajat 26, SLTP sederajat 25, diploma IV atau strata I 2, diploma I atau II 1, akademi atau diploma III 1.">
+              <div class="education-row" style="--value: 85%;">
+                <span class="education-label">TIDAK / BELUM SEKOLAH</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>102</strong>
+              </div>
+              <div class="education-row" style="--value: 100%;">
+                <span class="education-label">TAMAT SD / SEDERAJAT</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>120</strong>
+              </div>
+              <div class="education-row" style="--value: 20.83%;">
+                <span class="education-label">SLTP/SEDERAJAT</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>25</strong>
+              </div>
+              <div class="education-row" style="--value: 28.33%;">
+                <span class="education-label">SLTA / SEDERAJAT</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>34</strong>
+              </div>
+              <div class="education-row" style="--value: 1.67%;">
+                <span class="education-label">DIPLOMA IV/ STRATA I</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>2</strong>
+              </div>
+              <div class="education-row" style="--value: 0.83%;">
+                <span class="education-label">DIPLOMA I / II</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>1</strong>
+              </div>
+              <div class="education-row" style="--value: 21.67%;">
+                <span class="education-label">BELUM TAMAT SD/SEDERAJAT</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>26</strong>
+              </div>
+              <div class="education-row" style="--value: 0.83%;">
+                <span class="education-label">AKADEMI/ DIPLOMA III/S. MUDA</span>
+                <span class="education-track"><span class="education-bar"></span></span>
+                <strong>1</strong>
+              </div>
+              <div class="education-axis" aria-hidden="true">
+                <span></span>
+                <div class="education-axis-values">
+                  <span>0</span>
+                  <span>20</span>
+                  <span>40</span>
+                  <span>60</span>
+                  <span>80</span>
+                  <span>100</span>
+                  <span>120</span>
+                </div>
+                <span></span>
+              </div>
+            </div>
+            <table class="sr-only">
+              <caption>Data tingkat pendidikan warga Padukuhan Surukidul</caption>
+              <tbody>
+                <tr><th scope="row">Tidak atau belum sekolah</th><td>102</td></tr>
+                <tr><th scope="row">Tamat SD sederajat</th><td>120</td></tr>
+                <tr><th scope="row">SLTP sederajat</th><td>25</td></tr>
+                <tr><th scope="row">SLTA sederajat</th><td>34</td></tr>
+                <tr><th scope="row">Diploma IV atau strata I</th><td>2</td></tr>
+                <tr><th scope="row">Diploma I atau II</th><td>1</td></tr>
+                <tr><th scope="row">Belum tamat SD sederajat</th><td>26</td></tr>
+                <tr><th scope="row">Akademi atau diploma III/S. Muda</th><td>1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="infographic-section">
+      <div class="container">
+        <article class="infographic-panel work-composition-card">
+          <div class="infographic-heading">
+            <p class="profile-kicker">Berdasarkan Pekerjaan</p>
+            <h2>Jenis pekerjaan warga</h2>
+          </div>
+          <div class="work-panel-content">
+            <div class="work-list">
+              <div><span>Wiraswasta</span><strong>15 Jiwa</strong></div>
+              <div><span>Petani/Perkebunan</span><strong>126 Jiwa</strong></div>
+              <div><span>Perangkat Desa</span><strong>3 Jiwa</strong></div>
+              <div><span>Pelajar/Mahasiswa</span><strong>45 Jiwa</strong></div>
+              <div><span>Mengurus Rumah Tangga</span><strong>17 Jiwa</strong></div>
+              <div><span>Karyawan Swasta</span><strong>8 Jiwa</strong></div>
+              <div><span>Buruh Tani/Perkebunan</span><strong>1 Jiwa</strong></div>
+              <div><span>Buruh Harian Lepas</span><strong>33 Jiwa</strong></div>
+              <div><span>Belum/Tidak Bekerja</span><strong>63 Jiwa</strong></div>
+            </div>
+            <div class="work-panel-chart">
+              <h3>Sebaran Pekerjaan</h3>
+              <p class="chart-title">Jumlah warga setiap jenis pekerjaan Padukuhan Surukidul</p>
+              <div class="column-chart work-column-chart" role="img" aria-label="Pekerjaan warga Padukuhan Surukidul: wiraswasta 15, petani atau perkebunan 126, perangkat desa 3, pelajar atau mahasiswa 45, mengurus rumah tangga 17, karyawan swasta 8, buruh tani atau perkebunan 1, buruh harian lepas 33, belum atau tidak bekerja 63.">
+                <div class="column-bars">
+                  <div class="column-item" style="--value: 10.71%;"><strong>15</strong><span class="column-bar"></span><em>Wiraswasta</em></div>
+                  <div class="column-item" style="--value: 90%;"><strong>126</strong><span class="column-bar"></span><em>Petani/<wbr>Perkebunan</em></div>
+                  <div class="column-item" style="--value: 2.14%;"><strong>3</strong><span class="column-bar"></span><em>Perangkat Desa</em></div>
+                  <div class="column-item" style="--value: 32.14%;"><strong>45</strong><span class="column-bar"></span><em>Pelajar/<wbr>Mahasiswa</em></div>
+                  <div class="column-item" style="--value: 12.14%;"><strong>17</strong><span class="column-bar"></span><em>Mengurus Rumah Tangga</em></div>
+                  <div class="column-item" style="--value: 5.71%;"><strong>8</strong><span class="column-bar"></span><em>Karyawan Swasta</em></div>
+                  <div class="column-item" style="--value: 0.71%;"><strong>1</strong><span class="column-bar"></span><em>Buruh Tani/<wbr>Perkebunan</em></div>
+                  <div class="column-item" style="--value: 23.57%;"><strong>33</strong><span class="column-bar"></span><em>Buruh Harian Lepas</em></div>
+                  <div class="column-item" style="--value: 45%;"><strong>63</strong><span class="column-bar"></span><em>Belum/<wbr>Tidak Bekerja</em></div>
+                </div>
+              </div>
+            </div>
+            <table class="sr-only">
+              <caption>Data mata pencaharian warga Padukuhan Surukidul</caption>
+              <tbody>
+                <tr><th scope="row">Wiraswasta</th><td>15</td></tr>
+                <tr><th scope="row">Petani atau perkebunan</th><td>126</td></tr>
+                <tr><th scope="row">Perangkat desa</th><td>3</td></tr>
+                <tr><th scope="row">Pelajar atau mahasiswa</th><td>45</td></tr>
+                <tr><th scope="row">Mengurus rumah tangga</th><td>17</td></tr>
+                <tr><th scope="row">Karyawan swasta</th><td>8</td></tr>
+                <tr><th scope="row">Buruh tani atau perkebunan</th><td>1</td></tr>
+                <tr><th scope="row">Buruh harian lepas</th><td>33</td></tr>
+                <tr><th scope="row">Belum atau tidak bekerja</th><td>63</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2026 Desa Suru Kidul. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+  <script src="/__/firebase/8.10.1/firebase-app.js" defer></script>
+  <script src="/__/firebase/8.10.1/firebase-firestore.js" defer></script>
+  <script src="/__/firebase/init.js" defer></script>
+  <script src="site-admin.js?v=pure-admin-1" defer></script>
+  <script src="accessibility.js" defer></script>
+</body>
+</html>
